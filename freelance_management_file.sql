@@ -282,5 +282,30 @@ begin
     where pr.project_id is null;
 end //
 
+Projects with more than 3 proposals
+CALL get_projects_with_many_proposals();
+    
+--Average rating for a specific project (replace 1 with the desired project_id)
+CALL get_project_average_rating(1);
+
+    
+    --Projects per freelancer
+ CALL get_freelancer_project_count();
+
+ --Total payments per project
+CALL get_total_payments_per_project();
+
+--Tasks for a specific project (replace 1 with the desired project_id)
+  CALL list_tasks_by_project(1);
+
+--Clients with the most projects
+CALL get_top_clients_by_projects();
+
+--Freelancers with most wins (lowest bids)
+CALL get_freelancers_with_most_wins();
+
+
+
+CALL get_projects_without_proposals();
 
 
